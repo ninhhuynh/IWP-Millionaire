@@ -105,6 +105,7 @@ int StringToQuestion(string str) {
 	string token;// hold question and answer
 	string prefix = "Q: ";
 	int n = 1;
+	int returnval = 0;
 	while ((pos = str.find(delimiter)) != std::string::npos) {
 		cout <<prefix << str.substr(0, pos) << endl;//cout question and answer here
 		str.erase(0, pos + delimiter.length());
@@ -115,16 +116,19 @@ int StringToQuestion(string str) {
 		if (Answer()) {
 			client.Send((char*)answer, 1,0);
 			answer = 0;
+			returnval = 1;
 			break;
 		}
 		string s = Recieve();
 		if (s == ".") {
 			cout << "you have ran out of time\n";
+			returnval = 0;
 			break;
 		}
 		else cout << s << endl;
 	}
 	clientstate = 0;
+	return returnval;
 }
 bool Answer() {
 	if(answer>0)
