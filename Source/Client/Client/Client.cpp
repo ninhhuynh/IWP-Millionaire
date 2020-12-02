@@ -148,11 +148,15 @@ int StringToQuestion(string str) {
 	string prefix = "Q: ";
 	int n = 1;
 	int returnval = 0;
+
 	while ((pos = str.find(delimiter)) != std::string::npos) {
 		cout <<prefix << str.substr(0, pos) << endl;//cout question and answer here
 		str.erase(0, pos + delimiter.length());
 		prefix = to_string(n++)+": ";
 	}
+	cout << prefix << str << endl;
+
+
 	cout << "please choose one!(5 for help, skip turn can be used only once): ";// change the global var(answer) to answer, 1-5
 	while (1) {
 		if (Answer()) {
