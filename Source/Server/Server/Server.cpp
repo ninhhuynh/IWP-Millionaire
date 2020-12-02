@@ -205,7 +205,7 @@ vector<string> GetQuestions() {
 	//shuffle the whole question list and get random number of questions
 	random_shuffle(questionList.begin(), questionList.end());
 	srand((unsigned)time(0));
-	int num_of_ques = (rand() % questionList.size()) + 1;
+	int num_of_ques = (rand() % questionList.size());
 	cout << "So cau hoi ngau nhien cho client la " << num_of_ques << endl;
 	vector<string>::const_iterator first = questionList.begin();
 	vector<string>::const_iterator last = questionList.begin() + num_of_ques;

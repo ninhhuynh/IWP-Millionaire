@@ -24,7 +24,7 @@ void Game::SendStringToOne(string str, CSocket &sock) {
 }
 void Game::Flow() {
 	SendStringToAll("The Game Has Started");
-	while (questionnum  < questionList.size()) {
+	while (1) {
 		cout << "Alive players num: " << GetAlivePlayersNum() << endl;
 		//send question and answers to all sockets here
 
@@ -48,9 +48,11 @@ void Game::Flow() {
 				cout << Players[i].name << " has failed\n";
 				SendStringToAll(Players[i].name + "has failed");
 			}
-
+			if (questionnum == questionList.size()) {
+				goto EndGame;
+			}
+			questionnum++;
 		}
-		questionnum++;
 	}
 	// rule 4.a.i
 	EndGame:
@@ -115,11 +117,14 @@ bool Game::Countdown(int counter,int socketindex) { //amount of seconds
 				if (!(Players[socketindex].UseHelp())) {
 					return false;
 				}
+				SendStringToAll(".");
 				return true;
 			}
 			if (s != answerList[questionnum]) {
+				SendStringToAll(".");
 				return false;
 			}
+			SendStringToAll(".");
 			return true;
 		}
 		cout << "\rTime remaining: " << counter << endl;
@@ -138,10 +143,11 @@ bool Game::Answered(int socketindex, string &s) {
 	if (n < 1) {
 		return false;
 	}
-	char buf[1];
-	while ((n = sockets[socketindex].Receive(buf, sizeof(buf),0)) > 0) {
-		s.append(buf);
-	}
+	int received_int = 0;
+
+	sockets[socketindex].Receive(&received_int, sizeof(received_int));
+
+	s = to_string(ntohl(received_int));
 	if (n < 0) {
 		cout << "some error";
 	}

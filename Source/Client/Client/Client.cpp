@@ -8,9 +8,19 @@
 #include <string.h>
 #include <math.h>
 #include<vector>
+#include <iostream>
+#include <future>
+#include <thread>
+#include <chrono>
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+static int getAnswer()
+{
+	int answer;
+	std::cin >> answer;
+	return answer;
+}
 
 
 // The one and only application object
@@ -158,15 +168,22 @@ int StringToQuestion(string str) {
 
 
 	cout << "please choose one!(5 for help, skip turn can be used only once): ";// change the global var(answer) to answer, 1-5
+	std::chrono::seconds timeout(9);
+	std::future<int> future = std::async(getAnswer);
 	while (1) {
-		if (Answer()) {
-			client.Send((char*)answer, 1,0);
+		if (future.wait_for(timeout) == std::future_status::ready)
+			answer = future.get();
+		if (Answer()) {         
+			int num = htonl(answer);
+			client.Send(&num, sizeof(num),0);
+			cout << "you answered: " << answer<<endl;
 			answer = 0;
 			returnval = 1;
 			break;
 		}
 		string s = Recieve();
 		if (s == ".") {
+			answer = 0;
 			cout << "you have ran out of time\n";
 			returnval = 0;
 			break;
