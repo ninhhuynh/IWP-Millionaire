@@ -27,9 +27,9 @@ public:
 	CSocket* sockets;
 	Game(vector<string>& nameList, CSocket* socks) {
 		sockets = socks;
-
 		for (u_int i = 0; i < nameList.size(); i++)
 			Players.push_back(Player(nameList[i]));
+		cout << "There are " << Players.size()<<"Players" << endl;
 	}
 	bool StartGame(vector<string> questions);
 	void Flow(); //Should be use when the game is started

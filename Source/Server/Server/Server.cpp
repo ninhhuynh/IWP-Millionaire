@@ -22,6 +22,7 @@
 CWinApp theApp;
 
 using namespace std;
+vector<string> GetQuestions();
 void checkNumClient(int& num_client);
 bool checkExistedName(char char_client_name[][100], char name[100], int num_client);
 
@@ -105,6 +106,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		for (int i = 0; i < num_client; i++) {
 			//check success
 			cout << "Ten cua client thu " << i + 1 << ": " << char_client_name[i] << endl;
+			nameList.push_back(char_client_name[i]);
 			//Gui thu tu choi cho clients
 			cout << "Thu tu choi cua client thu "<< i+1 << "la: "<< play_order[i] << endl;
 			sockClients[i].Send((char*)&play_order[i], sizeof(play_order[i]), 0);
@@ -207,5 +209,5 @@ vector<string> GetQuestions() {
 	vector<string>::const_iterator first = questionList.begin();
 	vector<string>::const_iterator last = questionList.begin() + num_of_ques;
 	vector<string> newVec(first, last);
-	return newVec
+	return newVec;
 }

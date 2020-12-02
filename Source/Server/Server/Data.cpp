@@ -76,13 +76,13 @@ void Game::GetQuestion(vector<string> questions)
 			n++;
 			token = s.substr(0, pos);
 			questionList.push_back(token);
-			cout << "appending: " << token << " to questionList";
+			cout << "appending: " << token << " to questionList" << endl;
 			s.erase(0, pos + delimiter.length());
 		}
-		cout << "appending: " << s << " to answerList";
+		cout << "appending: " << s << " to answerList" << endl;
 		answerList.push_back(s);
 		if (n > 1) {
-			cout << "err Getting Questions";
+			cout << "err Getting Questions" << endl;
 		}
 	}
 	/*srand((unsigned)time(0));
