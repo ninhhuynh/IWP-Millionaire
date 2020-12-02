@@ -1,10 +1,14 @@
 #include "stdafx.h"
-void Game::StartGame() {
+bool Game::StartGame(vector<string> questions) {
 	questionList.clear();
 	answerList.clear();
 	questionnum = 0;
-	GetQuestion();
+	GetQuestion(questions);
 	Flow();
+	bool restart=0;
+	cout << "do you want to restart(input 1 to restart)" << endl;
+	cin >> restart;
+	return restart;
 }
 void Game::SendStringToAll(string str) {
 	for (u_int i = 0; i < Players.size(); i++) {
@@ -61,14 +65,35 @@ void Game::Flow() {
 	SendStringToAll(winner + "Is our winner");
 	cout << "The Game has ended, The host can now start another game by pressing start button\n";
 }
-void Game::GetQuestion() {
-	//example: "Who is US new President?`Donald Trump,Joe Biden,Hilary Clinton,Benjamin Franklin"
+void Game::GetQuestion(vector<string> questions) 
+{
+	string delimiter = "=";
+	for (string s : questions) {
+		int n = 0;
+		size_t pos = 0;
+		string token;
+		while ((pos = s.find(delimiter)) != string::npos) {
+			n++;
+			token = s.substr(0, pos);
+			questionList.push_back(token);
+			cout << "appending: " << token << " to questionList";
+			s.erase(0, pos + delimiter.length());
+		}
+		cout << "appending: " << s << " to answerList";
+		answerList.push_back(s);
+		if (n > 1) {
+			cout << "err Getting Questions";
+		}
+	}
+	/*srand((unsigned)time(0));
+	int num_of_ques = (rand() % questionList.size()) + 1;
+	cout << "So cau hoi ngau nhien cho client la " << num_of_ques << endl;
 	questionList.push_back("ques1`one`two`three`four");
 	answerList.push_back("1");
 	questionList.push_back("ques2`one`two`three`four");
 	answerList.push_back("3");
 	questionList.push_back("ques3`one`two`three`four");
-	answerList.push_back("4");
+	answerList.push_back("4");*/
 }
 int Game::GetAlivePlayersNum()
 {	

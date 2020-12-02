@@ -74,7 +74,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		{
 			cout << "Da ket noi toi server" << endl;
 			//Nhan tu server, cho biet day la client thu may
-			int id; 
+			int id;
 			int num_client; // so nguoi choi
 			string client_name; // ten cua client
 			client.Receive((char*)&id, sizeof(id), 0);

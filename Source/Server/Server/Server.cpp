@@ -129,8 +129,12 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		
 		/*Game game(nameList, sockClients);*/
 		Game game(nameList, sockClients);
+		
 		// normal start and quit because we havent implement UI yet
-		game.StartGame();
+		bool restart = game.StartGame(questionList);
+		while (restart) {
+			restart = game.StartGame(GetQuestions());
+		}
 		game.SendStringToAll("-1");  
 
 		// template lobby UI
@@ -166,16 +170,16 @@ void checkNumClient(int& num_client) {
 			if (num_client < 2 || num_client > 10) {
 				check_client = false;
 				cout << "Number of clients must be from 2 to 10. Please enter again" << endl;
-				cin.clear();
 			}
 			else {
+				cout << num_client << endl;
 				check_client = true;
 			}
 		}
 		else {
 			cin.clear(); // clears the error flags
 			// this line discards all the input waiting in the stream
-			cin.ignore(0xffffffff,'\n');
+			cin.ignore(0xff,'\n');
 		}
 	} while (check_client == false);
 }
@@ -186,4 +190,22 @@ bool checkExistedName(char char_client_name[][100], char name[100], int num_clie
 		}
 	}
 	return true;
+}
+
+vector<string> GetQuestions() {
+	vector<string> questionList;
+	ifstream file("question.txt");
+	string fileContents;
+	while (getline(file, fileContents)) {
+		questionList.push_back(fileContents);
+	}
+	//shuffle the whole question list and get random number of questions
+	random_shuffle(questionList.begin(), questionList.end());
+	srand((unsigned)time(0));
+	int num_of_ques = (rand() % questionList.size()) + 1;
+	cout << "So cau hoi ngau nhien cho client la " << num_of_ques << endl;
+	vector<string>::const_iterator first = questionList.begin();
+	vector<string>::const_iterator last = questionList.begin() + num_of_ques;
+	vector<string> newVec(first, last);
+	return newVec
 }

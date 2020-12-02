@@ -22,6 +22,7 @@ class Game {
 	vector<string> answerList;
 	u_int questionnum = 0;
 	int countdown = 10;//seconds
+	u_int matchnum = 0;
 public:
 	CSocket* sockets;
 	Game(vector<string>& nameList, CSocket* socks) {
@@ -30,11 +31,11 @@ public:
 		for (u_int i = 0; i < nameList.size(); i++)
 			Players.push_back(Player(nameList[i]));
 	}
-	void StartGame();
+	bool StartGame(vector<string> questions);
 	void Flow(); //Should be use when the game is started
 	int GetAlivePlayersNum();
 	bool Countdown(int n,int socketindex);
-	void GetQuestion();
+	void GetQuestion(vector<string> questions);
 	bool Answered(int socketindex,string &s);
 	void SendStringToAll(string str);
 	void SendStringToOne(string str, CSocket& sock);
