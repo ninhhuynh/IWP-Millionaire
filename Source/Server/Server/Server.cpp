@@ -160,15 +160,22 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 void checkNumClient(int& num_client) {
 	bool check_client = false;
 	//Nhap so luong client
-	cout << "Nhap so luong client: ";
 	do {
-		cin >> num_client;
-		if (num_client < 2 || num_client > 10) {
-			check_client = false;
-			cout << "Number of clients must be from 2 to 10. Please enter again" << endl;
+		cout << "Nhap so luong client: ";
+		if (cin >> num_client) {
+			if (num_client < 2 || num_client > 10) {
+				check_client = false;
+				cout << "Number of clients must be from 2 to 10. Please enter again" << endl;
+				cin.clear();
+			}
+			else {
+				check_client = true;
+			}
 		}
 		else {
-			check_client = true;
+			cin.clear(); // clears the error flags
+			// this line discards all the input waiting in the stream
+			cin.ignore(0xffffffff,'\n');
 		}
 	} while (check_client == false);
 }
