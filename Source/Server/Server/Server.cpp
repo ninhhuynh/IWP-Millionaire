@@ -57,8 +57,7 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		//shuffle the whole question list and get random number of questions
 		random_shuffle(questionList.begin(), questionList.end());
 		srand((unsigned)time(0));
-		int num_of_ques = (rand() % questionList.size()) + 1;
-		cout << "So cau hoi ngau nhien cho client la " << num_of_ques << endl;
+		
 		//-----------------------------------------------
 		//Tao mang chua cac socket client
 		vector<string> nameList;
@@ -67,6 +66,8 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 		char char_client_name[11][100];
 		// Kiem tra so luong client
 		checkNumClient(num_client);
+		int num_of_ques = (rand() % questionList.size()) + num_client*3;
+		cout << "So cau hoi ngau nhien cho client la " << num_of_ques << endl;
 		cout << "Dang lang nghe ket noi tu client..." << endl;
 		//Tao mang chua cac socket client
 		CSocket* sockClients = new CSocket[num_client];
