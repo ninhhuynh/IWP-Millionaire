@@ -6,10 +6,95 @@ Choose the odd one?`A`B`1`C
 Traditional dress of Vietnam?`Ao dai`Kimono`Hanbok`Tracht
 CS494 is the course code of?`OS`Internetworking Protocols`EC`Drawing
 2021 is the year of which animal?`rat`buffalo`tiger`unicorn
-Kevin's birthday is on February 30, which means Kevin is?`a boy`a girl`a tree`an alien
+Kevin's birthday is February 30, which means Kevin is?`a boy`a girl`a tree`an alien
 Which country invented printing?`Vietnam`Lao`Thailand`China
 Who is the great leader of North Korea?`Ho Chi Minh`Kim Jong Un`Donal Trump`PewDiePie
 Full name of CS494 lecturer?`Tran Anh Duy`Dinh Ba Tien`Nguyen Tuan Nam`Tran Nam Dung
 School where our lecturer used to attend?`UCLA`Harvard`Yale`Stanford
 Which is a contructed language?`Logiban`English`Italian`Greek
-Name of an IDE?`Notepad`MS Word`YouTube`Visual Studio
+Which is a name of an IDE?`Notepad`MS Word`YouTube`Visual Studio
+Which is a popular beverage among young people?`cognac`milk tea`vodka`tequila
+Which is a Mexican beverage?`cognac`milk tea`vodka`tequila
+Which is a distilled alcoholic drink originated in Russia?`cognac`milk tea`vodka`tequila
+Which is a beverage originated in Taiwan?`cognac`milk tea`vodka`tequila
+Which is an alcoholic drink originated in France?`cognac`milk tea`vodka`tequila
+Who is the most handsome?`Lee Min Hoo`Taylor Swift`Selena Gomez`Mie Nguyen
+Who is the most handsome?`JVEvermind`Taylor Swift`Selena Gomez`Mie Nguyen
+Who is Vietnamese?`Lee Min Hoo`Taylor Swift`Selena Gomez`Mie Nguyen
+Who is associated with the song "We Don't Talk Anymore"? `Lee Min Hoo`Taylor Swift`Selena Gomez`Mie Nguyen
+Who appeared in Wizards of Waverly Place?`Lee Min Hoo`Taylor Swift`Selena Gomez`Mie Nguyen
+Who is known for as a country singer-songwriter?`JVEvermind`Taylor Swift`Selena Gomez`Mie Nguyen
+Who is a Vietnamese vlogger?`JVEvermind`Taylor Swift`Selena Gomez`Mie Nguyen
+Which is a shopping mall near HCMUS?`No Zone`Now Zone`Phuc Long`Koi
+Which brand is famous for milk tea?`No Zone`Now Zone`KFC`Koi
+Which is a franchise?`No Zone`Now Zone`KFC`YouTube
+Who is the only man who has milk?`MrPhuc`MrLoc`MrTho`Does not exist
+Which is a Vietnamese milk brand?`Vinamilk`Nestle`Milo`Abbott
+Which is a Vietnamese local brand?`Adidas`Dirty Coins`Nike`H&M
+IP in TCP/IP stands for?`Internet Protocol`Internal Process`Idiot Protocol`In Puddle
+DNS in CS494 stands for?`Domain Name System`Drink Nine Sodas`Both answers`None of them
+Which is a transport-layer protocol?`HTTP`FTP`TCP`SMTP
+Which is an application-layer protocol?`HTTP`Ethernet`TCP`UDP
+Which is a network-layer protocol?`HTTP`UDP`Ethernet`FTP
+Which is a link-layer protocol?`HTTP`UDP`Ethernet`FTP
+How many layers are there in the OSI model?`1`3`5`7
+Which host initiates the connection in client-server architecture?`client`server`either client or server`no need to initiate
+Full name of "P2P" networking architecture?`pen-to-pen`pie-to-pie`peer-to-peer`pet-to-pet
+Which port number is associated with HTTP?`20`40`60`80
+Which port number is associated with FTP?`20`40`60`80
+Which port number is associated with Secure Shell(SSH)?`20`21`22`23
+Which port number is associated with SMTP?`20`25`30`35
+Which object gets transferred in the application layer?`message`segment`packet`frame
+Which object gets transferred in the transport layer?`message`segment`packet`frame
+Which object gets transferred in the network layer?`message`segment`packet`frame
+Which object gets transferred in the link layer?`message`segment`packet`frame
+Which is the only planet in the solar system that teems with life?`Sun`Moon`Earth`Mars
+The Earth revolves around?`the sun`the moon`Mars`Venus
+Which is expected to be fully rounded during Mid-Autumn Festival?`the sun`the moon`Mars`Venus
+Which is the Earth's adjacent planet in the solar system?`the sun`the moon`Jupiter`Venus
+Which is the largest object in the solar system?`the sun`the moon`Mars`Venus
+The tides experienced on Earth are chiefly caused by the gravitational pull of?`the sun`the moon`Mars`Venus
+A meteorological phenomenon that is caused by reflection, refraction and dispersion of light in water droplets resulting in a spectrum of light appearing in the sky?`rain`rainbow`sunlight`cloud
+A smartphone brand associated with Vietnam?`Bphone`Iphone`Samsung`Xiaomi
+A smartphone brand associated with the US?`Bphone`Iphone`Samsung`Xiaomi
+A smartphone brand associated with Korea?`Bphone`Iphone`Samsung`Xiaomi
+A smartphone brand associated with China?`Bphone`Iphone`Samsung`Xiaomi
+Water boils at ___ Celcius dregrees?`10`42`100`132
+Water freezes at ___ Celcius dregrees?`0`10`100`1000
+Which is a kitchenware?`knife`speaker`brick`mortar
+Which is a social media?`Ubuntu`Windows`Lollipop`Facebook
+Which is a Linux OS distribution?`Ubuntu`Windows`Lollipop`Facebook
+Which is a mobile OS?`Ubuntu`Tweeter`Android`Facebook
+The Internet is a network of?`schools`networks`hospitals`candy
+The first robot to be given legal personhood?`Sara`Mafia`Sophia`Hanna
+How many colors are there in a rainbow?`1`3`5`7
+Another name of an "end-system"?`auto`mobile`bot`host
+Which is an English training app?`Facebook`Google`YouTube`Elsa
+Icon of Disney movies?`Luxo lamp`Tom`Jerry`Mickey mouse
+What is Vietnamese currency?`NTD`VND`Yen`Won
+What is Japanese currency?`NTD`VND`Yen`Won
+What is Taiwanese currency?`NTD`VND`Yen`Won
+What is Korean currency?`NTD`VND`Yen`Won
+Who is a ninja?`Naruto`Doraemon`Xuka`Nobita
+Whose family name is Uchiha?`Naruto`Doraemon`Xuka`Sasuke
+Who has a time machine?`Naruto`Doraemon`Xuka`Sasuke
+Who is clumsy?`Sakura`Doraemon`Xuka`Nobita
+Who comes from the future?`Sakura`Doraemon`Xuka`Nobita
+Who can stretches his/her body?`Sakura`Doraemon`Luffy`Nobita
+Who has green hair?`Sakura`Doraemon`Zoro`Nobita
+Who wears a suit?`Sanji`Doraemon`Luffy`Nobita
+Who is the prettiest? `Sanji`Nami`Luffy`Nobita
+Who is the smartest academically?`Deki`Doraemon`Xuka`Nobita
+Who is good at strategy?`Naruto`Shikamaru`Xuka`Sasuke
+Who is good at playing shogi? `Naruto`Shikamaru`Xuka`Sasuke
+Doraemon's favorite food is?`Ramen`Rice`Shrimp`Dorayaki
+Naruto's favorite food is?`Ramen`Rice`Shrimp`Dorayaki
+Luffy's iconic costume is?`straw hat`red hat`green hat`golden hat
+Zoro's iconic accessories are?`swords`straws`earrings`rings
+Where is manga originated from?`Vietnam`Lao`Japan`Thailand
+Which is the biggest holiday in Vietnam?`Thanksgiving`Christmas`Easter`Tet
+During Tet holiday, children are given?`paper`bomb`lucky money`letter
+What is used to chase evil spirit away on New Year Eve?`candle`firework`candy`rice
+What is the traditional food of Thanksgiving?`rice`noodle`beef`turkey
+Where do people go to wish good luck during Tet holiday?`bar`school`pagoda`hospital
+Which is the iconic costume of Vietnamese people?`conical hat`leather shoes`straw sandals`Kimono
